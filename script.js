@@ -134,12 +134,12 @@ beelineW.addEventListener("click", function() {
     );
 })
 
-closeP.addEventListener("click", function() {
+closeW.addEventListener("click", function() {
     whatsappbtn.style.display = "none"
 })
 
 document.addEventListener("click", function() {
     if (!whatsappbtn.contains(event.target) && event.target !== whatsappButton) {
-        whatsapp.style.display = "none"
+        whatsappbtn.style.display = "none"
     }
 })
