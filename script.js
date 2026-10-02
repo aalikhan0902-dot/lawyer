@@ -16,6 +16,15 @@ const whatsappButton =
 const menuLinks =
     document.querySelectorAll(".menu a");
 
+const phonebtn = document.getElementById("phonebtn");
+const altelP = document.getElementById("altelP");
+const beelineP = document.getElementById("beelineP");
+const closeP = document.getElementById("closeP");
+
+const whatsappbtn = document.getElementById("whatsappbtn");
+const altelW = document.getElementById("altelW");
+const beelineW = document.getElementById("beelineW");
+const closeW = document.getElementById("closeW");
 
 // ОТКРЫТЬ МЕНЮ
 
@@ -76,20 +85,61 @@ consultationButtons.forEach(function(button) {
 
 // ТЕЛЕФОН
 
+
+
 phoneButton.addEventListener("click", function() {
 
-    window.location.href = "tel:+77022031777";
+    phonebtn.style.display = "block"
+    
 
 });
 
+altelP.addEventListener("click", function() {
+    window.location.href = "tel:+77022031777";
+})
 
+beelineP.addEventListener("click", function() {
+    window.location.href = "tel:+77054721777";
+})
+
+closeP.addEventListener("click", function() {
+    phonebtn.style.display = "none"
+})
+
+document.addEventListener("click", function() {
+    if (!phonebtn.contains(event.target) && event.target !== phoneButton) {
+        phonebtn.style.display = "none"
+    }
+})
 // WHATSAPP
 
 whatsappButton.addEventListener("click", function() {
 
+    whatsappbtn.style.display = "block"
+
+});
+
+altelW.addEventListener("click", function() {
+    
     window.open(
         "https://wa.me/77022031777",
         "_blank"
     );
+})
 
-});
+beelineW.addEventListener("click", function() {
+    window.open(
+        "https://wa.me/77054721777",
+        "_blank"
+    );
+})
+
+closeP.addEventListener("click", function() {
+    whatsappbtn.style.display = "none"
+})
+
+document.addEventListener("click", function() {
+    if (!whatsappbtn.contains(event.target) && event.target !== whatsappButton) {
+        whatsapp.style.display = "none"
+    }
+})

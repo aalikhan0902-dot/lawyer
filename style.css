@@ -192,11 +192,17 @@ body {
 
     gap: 15px;
 }
-
+.altelP,
+.beelineP,
+.closeP,
+.closeW,
+.beelineW,
+.altelW,
 .gold-button,
 .dark-button,
 .phone-button,
-.whatsapp-button {
+.whatsapp-button,
+.contact-btn {
     padding: 15px 25px;
 
     border-radius: 7px;
@@ -356,23 +362,73 @@ body {
 }
 
 .phone-button {
+    
     background: #d4af62;
 
     border: 1px solid #d4af62;
 
     color: #0b0d12;
 }
+.contact-btn {
+    
+    background: whitesmoke;
+    text-decoration: none;
+    color: black;
 
+    border: 1px solid #555861;
+}
 .whatsapp-button {
-    background: transparent;
+    
+    background: #37c784;
 
     color: white;
 
     border: 1px solid #555861;
 }
 
+.altelP,
+.beelineP,
+.closeP,
+.altelW,
+.beelineW,
+.closeW{
+    
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid #555861;
+}
+.closeP:hover,
+.closeW:hover {
+    background: red;
+
+    color: white;
+
+    border: 1px solid #d4af62;
+    transform: translateY(-2px);
+}
+.altelW:hover,
+.beelineW:hover {
+    background: #37c784;
+
+    color: white;
+
+    border: 1px solid #d4af62;
+    transform: translateY(-2px);
+}
+.altelP:hover,
+.beelineP:hover {
+    background: #d4af62;
+
+    color: #0b0d12;
+
+    border: 1px solid #d4af62;
+    transform: translateY(-2px);
+}
 .phone-button:hover,
-.whatsapp-button:hover {
+.whatsapp-button:hover,
+.contact-btn:hover {
     transform: translateY(-2px);
 }
 
@@ -464,7 +520,9 @@ footer {
 
 
     .contact-buttons {
+        
         flex-direction: column;
+        position: relative;
     }
 
 
@@ -472,4 +530,22 @@ footer {
         width: 85%;
     }
 
+}
+
+.phonebtn,
+.whatsappbtn {
+    position: absolute;
+    padding: 30px;
+
+    background: #151820;
+
+    border: 1px solid #292d36;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+
+    display: none;
+
+    gap: 50px;
 }
